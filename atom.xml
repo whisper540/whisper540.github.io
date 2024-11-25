@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>石头的博客</title>
+  
+  <subtitle>石头和暖暖的日常</subtitle>
+  <link href="https://blog.anliu.site/atom.xml" rel="self"/>
+  
+  <link href="https://blog.anliu.site/"/>
+  <updated>2024-11-21T13:42:33.344Z</updated>
+  <id>https://blog.anliu.site/</id>
+  
+  <author>
+    <name>石头</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://blog.anliu.site/2024/11/21/hello-world/"/>
+    <id>https://blog.anliu.site/2024/11/21/hello-world/</id>
+    <published>2024-11-21T13:42:33.343Z</published>
+    <updated>2024-11-21T13:42:33.344Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
