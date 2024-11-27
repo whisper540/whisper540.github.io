@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>嗨，暖暖</title>
+      <link href="/2024/11/27/hai-nuan-nuan/"/>
+      <url>/2024/11/27/hai-nuan-nuan/</url>
+      
+        <content type="html"><![CDATA[<p>暖暖的石头，开始记录我们的故事。</p><h2 id="絮絮叨叨"><a href="#絮絮叨叨" class="headerlink" title="絮絮叨叨"></a>絮絮叨叨</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 心语 </tag>
+            
+            <tag> 爱情 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>搭建日记</title>
+      <link href="/2024/11/27/first-post/"/>
+      <url>/2024/11/27/first-post/</url>
+      
+        <content type="html"><![CDATA[<p>终于在2024年11月27日19:02:00，基于github静态页面我搭建了自己的个人博客。</p><h2 id="主要介绍"><a href="#主要介绍" class="headerlink" title="主要介绍"></a>主要介绍</h2><p>虽然这个博客很简单，但是它是我自己的，我可以用它来记录我和暖暖的生活，记录我们的学习，记录我们的思考。</p><h2 id="主要技术"><a href="#主要技术" class="headerlink" title="主要技术"></a>主要技术</h2><ul><li>博客框架：Hexo</li><li>博客主题：Matery</li><li>评论系统：Livere</li><li>域名：腾讯云</li><li>加速：Cloudflare</li><li>服务器：Github Pages</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2024/11/21/hello-world/"/>
       <url>/2024/11/21/hello-world/</url>
