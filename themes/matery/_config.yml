@@ -84,9 +84,9 @@ music:
     enable: true
     show: 听听音乐
   autoHide: true    # hide automaticaly
-  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
+  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require	song id / playlist id / album id / search keyword
+  id: 9182802149     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
   autoplay: false   # 是否自动播放
   theme: '#42b983'
@@ -106,7 +106,7 @@ musics:
     show: 听听音乐
   server: tencent   #require music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
-  id: 1776127550     #require song id / playlist id / album id / search keyword
+  id: 9182802149     #require song id / playlist id / album id / search keyword
   fixed: false      # 开启吸底模式
   autoplay: true   # 是否自动播放
   theme: '#42b983'
@@ -154,17 +154,17 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/whisper540
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/blinkfox
-  email: 1181062873@qq.com
+  github:  https://github.com/whisper540
+  email: 1070490031@qq.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: 1181062873
+  qq: 1070490031
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
   rss: true # true、false
@@ -241,7 +241,7 @@ clicklove:
 # 是否激活页面樱花效果, 只在桌面版网页启用特效
 # 下面三种特效建议选择一种就够了，
 sakura:
-  enable: false
+  enable: true
 
 # 是否激活页面鼠标星星跟随效果, 只在桌面版网页启用特效
 mouseStar:
@@ -267,17 +267,17 @@ myProjects:
     hexo-theme-matery:
       icon: fas fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
+      url: https://github.com/whisper540
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
     Fenix:
         icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
+        url: https://github.com/whisper540
         desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
     typora-vue-theme:
         icon: fas fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
+        url: https://github.com/whisper540
         desc: This is a typora theme inspired by Vue document style.
 
 # config my skills informations in about page.
@@ -361,8 +361,8 @@ disqus:
 # Livere comment configuration, the default is not activated
 # Livere 来必力评论模块的配置，默认为不激活
 livere:
-  enable: false
-  uid:
+  enable: true
+  uid: MTAyMC82MDI1MS8zNjcxOQ==
 
 # 腾讯人机验证
 # 注意：目前只适配和测试了valine，其它评论系统未调试验证！
@@ -370,7 +370,7 @@ livere:
 # 管理验证码: https://console.cloud.tencent.com/captcha/graphical
 tcaptcha:
   enable: true
-  appid: xxxxxxxxxx # 你的appid
+  appid: 2085383460 # 你的appid
 
 # The configuration of the Valine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
@@ -397,7 +397,7 @@ waline:
   enable: false
   # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
   # 下面是一个例子，请替换成自己的服务端
-  serverURL: https://waline.your-domain.com
+  serverURL: https://blog.anliu.site
   avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
 
 changyan:
@@ -408,7 +408,7 @@ changyan:
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/whisper540
   title: Fork Me
 
 # The configuration of the Twikoo comment module is not activated by default.
@@ -680,8 +680,8 @@ background:
 # 说说 https://artitalk.js.org/
 artitalk:
   enable: false
-  appId: # xxxxx
-  appKey: # xxxxxx
+  appId: oVCNT3UmaLRwc40bx5l8z3jk-MdYXbMMI
+  appKey: pFBTrT0kyABWdkNao7nNIEHD
 
 # 哔哔功能配置
 # 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content
