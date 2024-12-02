@@ -6,7 +6,7 @@
   <link href="https://blog.anliu.site/atom.xml" rel="self"/>
   
   <link href="https://blog.anliu.site/"/>
-  <updated>2024-11-27T11:24:14.895Z</updated>
+  <updated>2024-12-02T10:25:38.186Z</updated>
   <id>https://blog.anliu.site/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>基于alist图床写博客</title>
+    <link href="https://blog.anliu.site/2024/12/02/alist-typora-picgo/"/>
+    <id>https://blog.anliu.site/2024/12/02/alist-typora-picgo/</id>
+    <published>2024-12-02T08:46:11.000Z</published>
+    <updated>2024-12-02T10:25:38.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如何在github pages上写博客？本篇介绍如何使用阿里云盘作为图床，写一篇markdown格式的博客，并实现引入本地图片自动上传到阿里云盘，并把md中图片路径自动调整为上传阿里云盘后的url地址。&lt;/p&gt;
+&lt;h2 id=&quot;相关技术介绍&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://blog.anliu.site/categories/Markdown/"/>
+    
+    
+    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="技术" scheme="https://blog.anliu.site/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="hexo" scheme="https://blog.anliu.site/tags/hexo/"/>
+    
+    <category term="picgo" scheme="https://blog.anliu.site/tags/picgo/"/>
+    
+    <category term="typora" scheme="https://blog.anliu.site/tags/typora/"/>
+    
+    <category term="alist" scheme="https://blog.anliu.site/tags/alist/"/>
+    
+  </entry>
+  
+  <entry>
     <title>嗨，暖暖</title>
     <link href="https://blog.anliu.site/2024/11/27/hai-nuan-nuan/"/>
     <id>https://blog.anliu.site/2024/11/27/hai-nuan-nuan/</id>
     <published>2024-11-27T10:57:09.000Z</published>
-    <updated>2024-11-27T11:24:14.895Z</updated>
+    <updated>2024-12-02T08:29:18.253Z</updated>
     
     
       

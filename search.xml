@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>基于alist图床写博客</title>
+      <link href="/2024/12/02/alist-typora-picgo/"/>
+      <url>/2024/12/02/alist-typora-picgo/</url>
+      
+        <content type="html"><![CDATA[<p>如何在github pages上写博客？本篇介绍如何使用阿里云盘作为图床，写一篇markdown格式的博客，并实现引入本地图片自动上传到阿里云盘，并把md中图片路径自动调整为上传阿里云盘后的url地址。</p><h2 id="相关技术介绍"><a href="#相关技术介绍" class="headerlink" title="相关技术介绍"></a>相关技术介绍</h2><p><a href="https://docs.github.com/zh/pages" title="github pages">github pages</a>：存放在github上的文件可以直接配置github page成为静态文件服务器，可以直接通过域名访问。</p><p><a href="https://hexo.io/" title="hexo官网">hexo</a>：一个基于nodejs的生成静态页面的框架，支持各种主题，支持markdown格式的文件，编辑完可以一键发布成github pages。</p><p><a href="https://hexo.io/" title="alist 官网">alist</a>：当下一个流行的网盘管理方案，支持接入各种主流网盘和webdav，本篇举例的是阿里云盘。</p><p><a href="https://picgo.github.io/PicGo-Doc/" title="picgo 官网">picgo</a>：一个图床（永久存放图片的服务器，可以通过url地址访问图片）管理工具，有mac端linux和windows客户端，可以把图片文件直接上传到alist（本篇使用阿里云盘作为存放图片的位置）</p><p><a href="https://typora.io/" title="typora 官网">typora</a>：一个markdown编辑器，之所以使用typora，是因为typora可以直接调用pico，把本地的图片直接上传到alist并插入上传成功后的图片链接。</p><p>本博客地址内的所有文章均采用此方案编写。</p><h2 id="hexo-安装配置"><a href="#hexo-安装配置" class="headerlink" title="hexo 安装配置"></a>hexo 安装配置</h2><p>官网：<a href="https://hexo.io/" title="hexo官网">hexo</a><br>hexo安装参照官方文档即可，本人博客主题为matery，其它不做过多介绍。</p><h2 id="alist-安装配置"><a href="#alist-安装配置" class="headerlink" title="alist 安装配置"></a>alist 安装配置</h2><p>官网：<a href="https://hexo.io/" title="alist 官网">alist</a><br>alist安装参照官方文档即可，推荐使用docker方式安装，本人在nas上搭建了alist，所以选用docker方式安装。</p><p><strong>!注意：安装的时候要记录下自己安装的alist版本（是2还是3），后面配置picgo的时候要用到</strong></p><p>安装完毕后，参照官方文档接入<a href="https://alist.nn.ci/zh/guide/drivers/aliyundrive_open.html">阿里云盘</a>。</p><h2 id="pico-安装配置"><a href="#pico-安装配置" class="headerlink" title="pico 安装配置"></a>pico 安装配置</h2><p>官网：<a href="https://picgo.github.io/PicGo-Doc/" title="picgo 官网">picgo</a><br>pico的安装参照官方文档，刚安装好的picgo并不是原生支持alist，需要安装第三方插件：<a href="">picgo-plugin-alist</a><br>刚安装好的picgo界面如下：<br><img src="https://alist.anliu.site/d/alist-ali/pico-install-01.png"></p><h3 id="1-安装picgo-plugin-alist插件："><a href="#1-安装picgo-plugin-alist插件：" class="headerlink" title="1. 安装picgo-plugin-alist插件："></a>1. 安装picgo-plugin-alist插件：</h3><p><a href="https://github.com/PicGo/Awesome-PicGo">官方插件列表</a>中查找*<a href="https://github.com/PicGo/Awesome-PicGo">picgo-plugin-alist</a>*插件，插件安装分为在线和离线安装</p><h4 id="方式一、在线安装"><a href="#方式一、在线安装" class="headerlink" title="方式一、在线安装"></a>方式一、在线安装</h4><p><img src="https://alist.anliu.site/d/alist-ali/pico-install-02.png"></p><h4 id="方式二、离线安装"><a href="#方式二、离线安装" class="headerlink" title="方式二、离线安装"></a>方式二、离线安装</h4><p>找到pico在机器上安装后的插件目录：</p><ul><li><p>Windows: %APPDATA%\picgo\</p></li><li><p>Linux: $XDG_CONFIG_HOME/picgo/ or ~/.config/picgo/</p></li><li><p>macOS: ~/Library/Application\ Support/picgo/</p></li></ul><p>在该目录打开命令行，然后执行命令：<br><code>npm install picgo-plugin-alist</code><br>成功安装后，显示如下：<br><img src="https://alist.anliu.site/d/alist-ali/pico-install-03.png"></p><h3 id="2-配置-picgo-plugin-alist-插件"><a href="#2-配置-picgo-plugin-alist-插件" class="headerlink" title="2. 配置 picgo-plugin-alist 插件"></a>2. 配置 <strong>picgo-plugin-alist</strong> 插件</h3><p><img src="https://alist.anliu.site/d/alist-ali/pico-install-04.png"><br><img src="https://alist.anliu.site/d/alist-ali/pico-install-05.png"><br><img src="https://alist.anliu.site/d/alist-ali/pico-install-06.png"></p><h3 id="3-获取alist的管理员token"><a href="#3-获取alist的管理员token" class="headerlink" title="3. 获取alist的管理员token"></a>3. 获取alist的管理员token</h3><p>在alist页面点击管理-设置-其它，<img src="https://alist.anliu.site/d/alist-ali/alist-install-01.png"><br><img src="https://alist.anliu.site/d/alist-ali/alist-install-02.png"></p><h2 id="typora-安装配置"><a href="#typora-安装配置" class="headerlink" title="typora 安装配置"></a>typora 安装配置</h2><p>官网：<a href="https://typora.io/" title="typora 官网">typora</a></p><p>双击安装typora，安装完毕后，进入设置页面</p><p><img src="https://alist.anliu.site/d/alist-ali/typora-install-01.png"></p><p>此时在markdown中插入本地图片就会自动调用picgo上传到alist中，上传成功后动态修改插入图片的地址为alist中上传图片的地址：</p><p><img src="https://alist.anliu.site/d/alist-ali/typora-install-02.png"></p><p><img src="https://alist.anliu.site/d/alist-ali/typora-install-03.png"></p><p>至此你可以拥有一个属于自己的阿里云盘的图床。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> picgo </tag>
+            
+            <tag> typora </tag>
+            
+            <tag> alist </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>嗨，暖暖</title>
       <link href="/2024/11/27/hai-nuan-nuan/"/>
       <url>/2024/11/27/hai-nuan-nuan/</url>
