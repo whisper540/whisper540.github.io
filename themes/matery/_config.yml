@@ -361,7 +361,7 @@ disqus:
 # Livere comment configuration, the default is not activated
 # Livere 来必力评论模块的配置，默认为不激活
 livere:
-  enable: true
+  enable: false
   uid: MTAyMC82MDI1MS8zNjcxOQ==
 
 # 腾讯人机验证
@@ -376,10 +376,10 @@ tcaptcha:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:  # 必填
-  appKey: # 必填
-  serverURLs: # 必填 https://你的api
+  enable: true
+  appId: oVCNT3UmaLRwc40bx5l8z3jk-MdYXbMMI # 必填
+  appKey: pFBTrT0kyABWdkNao7nNIEHD # 必填
+  serverURLs: https://ovcnt3um.api.lncldglobal.com # 必填 https://你的api
   notify: false
   verify: false
   visitor: true
@@ -397,7 +397,7 @@ waline:
   enable: false
   # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
   # 下面是一个例子，请替换成自己的服务端
-  serverURL: https://blog.anliu.site
+  serverURL: https://ovcnt3um.api.lncldglobal.com
   avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
 
 changyan:
