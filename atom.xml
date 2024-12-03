@@ -6,7 +6,7 @@
   <link href="https://blog.anliu.site/atom.xml" rel="self"/>
   
   <link href="https://blog.anliu.site/"/>
-  <updated>2024-12-02T10:25:38.186Z</updated>
+  <updated>2024-12-03T02:50:27.246Z</updated>
   <id>https://blog.anliu.site/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>学习web3-01</title>
+    <link href="https://blog.anliu.site/2024/12/03/study-web3-01/"/>
+    <id>https://blog.anliu.site/2024/12/03/study-web3-01/</id>
+    <published>2024-12-03T02:04:17.000Z</published>
+    <updated>2024-12-03T02:50:27.246Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本篇博客收集整理一些web3.0的学习资料和视频，由于web3在国外的系统学习资料较少（某种原因），所以资料也较为零散，希望大家一起学习，积极沟通分享。&lt;/p&gt;
+&lt;h2 id=&quot;背景概述&quot;&gt;&lt;a href=&quot;#背景概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web3.0" scheme="https://blog.anliu.site/categories/Web3-0/"/>
+    
+    
+    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="技术" scheme="https://blog.anliu.site/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Web3.0" scheme="https://blog.anliu.site/tags/Web3-0/"/>
+    
+    <category term="远程工作" scheme="https://blog.anliu.site/tags/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基于alist图床写博客</title>
     <link href="https://blog.anliu.site/2024/12/02/alist-typora-picgo/"/>
     <id>https://blog.anliu.site/2024/12/02/alist-typora-picgo/</id>
     <published>2024-12-02T08:46:11.000Z</published>
-    <updated>2024-12-02T10:25:38.186Z</updated>
+    <updated>2024-12-03T01:38:16.791Z</updated>
     
     
       
@@ -35,7 +67,7 @@
     
     
     
-    <category term="Markdown" scheme="https://blog.anliu.site/categories/Markdown/"/>
+    <category term="Blog" scheme="https://blog.anliu.site/categories/Blog/"/>
     
     
     <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>

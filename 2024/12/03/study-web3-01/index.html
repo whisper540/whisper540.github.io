@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2024, 石头,暖暖,日常,博客">
-    <meta name="description" content="这是一个记录石头和暖暖日常的博客">
+    <meta name="keywords" content="学习web3-01, 石头,暖暖,日常,博客">
+    <meta name="description" content="整理收集一些web3的学习资料。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2024 | 暖暖的石头</title>
+    <title>学习web3-01 | 暖暖的石头</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -38,9 +38,7 @@
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
-
 
 
 
@@ -333,472 +331,502 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                石头和暖暖的日常
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">学习web3-01</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-<script>
-    
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="container content">
 
     
-    <div class="container archive-calendar">
+    <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div id="post-calendar" class="card-content"></div>
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                <span class="chip bg-color">博客</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                                <span class="chip bg-color">技术</span>
+                            </a>
+                        
+                            <a href="/tags/Web3-0/">
+                                <span class="chip bg-color">Web3.0</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C/">
+                                <span class="chip bg-color">远程工作</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Web3-0/" class="post-category">
+                                Web3.0
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-12-03
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>本篇博客收集整理一些web3.0的学习资料和视频，由于web3在国外的系统学习资料较少（某种原因），所以资料也较为零散，希望大家一起学习，积极沟通分享。</p>
+<h2 id="背景概述"><a href="#背景概述" class="headerlink" title="背景概述"></a>背景概述</h2><h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><blockquote>
+<p>论你是做前端、后端、智能合约还是全栈，都需要了解 Web3 中的基本概念。其中包括：<code>Web3 原理、加密货币、区块链、钱包、交易所、区块链浏览器、智能合约、NFT、DApp、DAO、比特币底层原理及核心技术、以太坊底层原理及核心技术</code>。</p>
+</blockquote>
+<p>我们先了解一下专业术语有哪些：</p>
+<ul>
+<li><strong>Web3：</strong> 它是以太坊区块链 Ethereum blockchain 和智能合约 Smart Contracts 之间的连接。</li>
+<li><strong>以太坊 Ethereum：</strong> 一个去中心化的开源区块链 blockchain，允许用户通过创建智能合约 creating smart contracts 与网络进行交互。它的原生加密货币是以太币。就市值而言，以太币是仅次于比特币的第二大最有价值的加密货币。它由 Vitalik Buterin 于 2013 年创建。</li>
+<li><strong>智能合约 Smart Contracts ：</strong> 它们是存储在区块链上的计算机程序 computer programs ，在满足预定条件时运行。智能合约是用 Solidity 语言编写的。</li>
+<li><strong>去中心化 Decentralized ：</strong> 数据状态不由中央实体 central entity、平台 platform 或个人 individual 收集</li>
+<li><strong>区块链：</strong> 区块链网络是一种点对点连接，其中信息在多个设备之间共享，几乎不可能被黑客入侵。它是一种记录信息的系统，其方式使得很难或不可能更改保存在网络上的信息。</li>
+<li><strong>Solidity：</strong> 一种用于编写智能合约 writing smart contracts 的面向对象 object-oriented 的编程语言。它用于在各种区块链平台上实施智能合约，最著名的是以太坊。Solidity 的语法类似于 javascript。要了解 Solidity，最好有 javascript 等编程语言的背景。直接跳入 Solidity 是一个坏主意</li>
+<li><strong>Dapp：</strong> 代表去中心化应用程序 Decentralized App 。它们是在去中心化网络或区块链上运行其后端代码（主要用 Solidity 编写的智能合约）的应用程序。可以使用 react、vue 或 Angular 等前端框架构建 Dapps。</li>
+<li><strong>Bitcoin 比特币：</strong> 世界上第一个被广泛应用的加密货币。</li>
+<li><strong>Crypto:</strong> 又称 Cryptocurrency，加密货币，一种去中心化的数字货币。</li>
+<li><strong>NFT：</strong> Non-Fungible Token，一种在链上被记录的、有所有权的数字资产。</li>
+<li><strong>DAO：</strong> Decentralized Autonomous Organization，去中心化的自治组织。</li>
+<li><strong>Metaverse 元宇宙：</strong> 一种由科技手段创造的虚拟世界的构想。</li>
+<li><strong>DeFi Decentralized Finance：</strong> 去中心化金融系统。</li>
+<li><strong>Token 代币：</strong> 可以理解为加密货币、NFT 等数字资产的统称。</li>
+<li><strong>GameFi：</strong> Game + DeFi，中文说法链游，游戏中的金融系统可通过加密货币和 NFT 映射到现实。</li>
+</ul>
+<h3 id="区块链基础知识："><a href="#区块链基础知识：" class="headerlink" title="区块链基础知识："></a>区块链基础知识：</h3><blockquote>
+<p>区块链是 Web3 的基础。你首先要了解它是如何工作的，以及它为什么会彻底改变我们交换商品和支付的方式。</p>
+</blockquote>
+<p>区块链技术不仅仅是和加密货币有关，而是已经成为真正的分布式云计算系统，能够运行完整的后端（为了和 web2.0 时代的后端进行区分，我有时也习惯称它为链端）来为前端的去中心化应用程序 (DApp) 提供动力。</p>
+<p>在学习完区块链基础知识后，你应该能够准确回答出以下问题：</p>
+<ul>
+<li>Web1.0、Web2.0 和 Web3 的区别？</li>
+<li>什么是区块链？</li>
+<li>什么是分布式账本？</li>
+<li>什么是加密货币？</li>
+<li>什么是加密钱包？</li>
+<li>什么是区块链浏览器？</li>
+</ul>
+<h3 id="去中心化应用基础知识："><a href="#去中心化应用基础知识：" class="headerlink" title="去中心化应用基础知识："></a>去中心化应用基础知识：</h3><p>当你了解了什么是区块链、Node、共识机制和这些技术的主要组件后，你应该会思考：“我可以使用区块链开发什么样的应用程序？”</p>
+<p>建立在区块链之上的应用被称为去中心化应用或者被称为 DApp，它在大的结构上和传统 Web2.0 应用很像，包含两个部分：</p>
+<ul>
+<li>使用 JavaScript 或 React、Vue、Svelte 等框架/库构建的标准前端。</li>
+<li>使用 Solidity/Solana/Rust 等语言构建的后端，它们建立在区块链之上。</li>
+</ul>
+<p>你除了要了解什么是去中心化应用，还要了解 DApp 的前端和后端是如何通信和交换数据的，你需要学习前端开发和后端开发，并且需要掌握 API 的基本原理。</p>
+<h3 id="前端基础知识："><a href="#前端基础知识：" class="headerlink" title="前端基础知识："></a>前端基础知识：</h3><p>因为 DApp 也要有前端页面，所以你必须懂前端基础知识。这部分内容并不多。</p>
+<ul>
+<li>一款代码编辑器：VSCode。</li>
+<li>三门必备网站编程语言：HTML、CSS、JavaScript。</li>
+<li>一门非必选静态类型语言：TypeScript。</li>
+</ul>
+<h3 id="前端框架："><a href="#前端框架：" class="headerlink" title="前端框架："></a>前端框架：</h3><p>只学习前端基础知识确实能够开发一个 DApp 的前端，但要想 hold 住一个稍有规模的项目还是比较吃力的。这时需要学习一门框架。<br>目前大多数 Web3 项目都会采用 Next.js 框架，并使用 Vercel 部署。<br>而 Next.js 框架又基于 React 库。<br>所以这里你需要学习 React 和 Next.js。<br>当然你也可以学习 Vue、Angular、jQuery 这些库或者框架，但使用率没那么高，机会会少很多。</p>
+<h3 id="后端基础知识："><a href="#后端基础知识：" class="headerlink" title="后端基础知识："></a>后端基础知识：</h3><p>任何一门编程语言都可以充当 Web3 的后端，可以学习 Nodejs、Go、Java。<br>这里推荐 Nodejs，因为是全栈，使用 Nodejs 的话可以前后端都只使用一门语言就可以了。</p>
+<h3 id="后端框架："><a href="#后端框架：" class="headerlink" title="后端框架："></a>后端框架：</h3><p>Next.js 可以写一些 API，使用 Next.js 作为后端框架完全可以。<br>当然也可以选择其他语言的框架，比如 Nodejs 的 express、koa；Java 的 Spring；Go 的 gin、Iris 等。</p>
+<h3 id="智能合约："><a href="#智能合约：" class="headerlink" title="智能合约："></a>智能合约：</h3><p>你需要掌握 Remix 编辑器的使用，Solidity 编程语言的使用。还要学会一些工具，比如 Hardhat、Waffle、Ganache 和 Truffle，它们可以帮我们更好的完成智能合约编译、测试和部署工作。你还需要学习 OpenZeppelin，它是一个很棒的 Solidity 库。<br>然后还需要学习各种协议标准以及它们的区别，比如 ERC20、ERC721 和 ERC1155 等。这是必不可少的基础。同时你还需要知道代理合约。</p>
+<h3 id="智能合约交互："><a href="#智能合约交互：" class="headerlink" title="智能合约交互："></a>智能合约交互：</h3><p>智能合约交互需要学习 Web3.js、Ethers.js 和 Wagmi 这三个主流的库。如果你使用 TypeScript，还需要学会使用 typechain 这个库。<br>Ethers.js 是我认为目前最好的智能合约交互库。<br>如果你使用 Next.js + React + Typescript 进行开发，那么 Wagmi 是更好的选择。</p>
+<h3 id="DApp："><a href="#DApp：" class="headerlink" title="DApp："></a>DApp：</h3><p>去中心化应用程序统称。</p>
+<h2 id="文档资料"><a href="#文档资料" class="headerlink" title="文档资料"></a>文档资料</h2><p><a target="_blank" rel="noopener" href="https://54web3.cc/blog/roadmap/learning-path-web3" title="web3学习路线">web3研习社团-web3学习路线</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jackchen0120/ethereum_book/blob/master/README.md">《精通以太坊–实现数字合约》中文版</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.nextjs.cn/">Next.js官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://soliditylang.org/">solidity官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://cryptozombies.io/">通过玩游戏学会DApp</a></p>
+<p>书记推荐：《精通比特币》《精通以太坊》，比其他畅销书质量高很多，都有中文版：<br><img src="https://alist.anliu.site/d/alist-ali/book-01.jpg"></p>
+<h2 id="视频资料"><a href="#视频资料" class="headerlink" title="视频资料"></a>视频资料</h2><p><a target="_blank" rel="noopener" href="https://youtu.be/HS_F8UTg61M?si=aYfzVzCz8OK4UUET">web3入门知识介绍-清华大学公开课</a></p>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/edoCGxDty1k?si=-PYqZSQ-EXTfzEkg">web3入门概念介绍</a></p>
+<h2 id="推荐web3的up主"><a href="#推荐web3的up主" class="headerlink" title="推荐web3的up主"></a>推荐web3的up主</h2><p>花果山大圣（b站、twitter、telegram）：前端、比较出名的web3从业者、up主，web3的telegram群(<a target="_blank" rel="noopener" href="https://t.me/shengxj11/145990">https://t.me/shengxj11/145990</a>)</p>
+<h2 id="推荐数字钱包"><a href="#推荐数字钱包" class="headerlink" title="推荐数字钱包"></a>推荐数字钱包</h2><p>小狐狸、欧意都是很不错的钱包，可以下载注册个试用一下。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">石头</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.anliu.site/2024/12/03/study-web3-01/">https://blog.anliu.site/2024/12/03/study-web3-01/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">石头</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                                    <span class="chip bg-color">博客</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                                    <span class="chip bg-color">技术</span>
+                                </a>
+                            
+                                <a href="/tags/Web3-0/">
+                                    <span class="chip bg-color">Web3.0</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C/">
+                                    <span class="chip bg-color">远程工作</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
-
-    
-
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2023-12-03", "2024-12-03"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2023-12-03", 0], ["2023-12-04", 0], ["2023-12-05", 0], ["2023-12-06", 0], ["2023-12-07", 0], ["2023-12-08", 0], ["2023-12-09", 0], ["2023-12-10", 0], ["2023-12-11", 0], ["2023-12-12", 0], ["2023-12-13", 0], ["2023-12-14", 0], ["2023-12-15", 0], ["2023-12-16", 0], ["2023-12-17", 0], ["2023-12-18", 0], ["2023-12-19", 0], ["2023-12-20", 0], ["2023-12-21", 0], ["2023-12-22", 0], ["2023-12-23", 0], ["2023-12-24", 0], ["2023-12-25", 0], ["2023-12-26", 0], ["2023-12-27", 0], ["2023-12-28", 0], ["2023-12-29", 0], ["2023-12-30", 0], ["2023-12-31", 0], ["2024-01-01", 0], ["2024-01-02", 0], ["2024-01-03", 0], ["2024-01-04", 0], ["2024-01-05", 0], ["2024-01-06", 0], ["2024-01-07", 0], ["2024-01-08", 0], ["2024-01-09", 0], ["2024-01-10", 0], ["2024-01-11", 0], ["2024-01-12", 0], ["2024-01-13", 0], ["2024-01-14", 0], ["2024-01-15", 0], ["2024-01-16", 0], ["2024-01-17", 0], ["2024-01-18", 0], ["2024-01-19", 0], ["2024-01-20", 0], ["2024-01-21", 0], ["2024-01-22", 0], ["2024-01-23", 0], ["2024-01-24", 0], ["2024-01-25", 0], ["2024-01-26", 0], ["2024-01-27", 0], ["2024-01-28", 0], ["2024-01-29", 0], ["2024-01-30", 0], ["2024-01-31", 0], ["2024-02-01", 0], ["2024-02-02", 0], ["2024-02-03", 0], ["2024-02-04", 0], ["2024-02-05", 0], ["2024-02-06", 0], ["2024-02-07", 0], ["2024-02-08", 0], ["2024-02-09", 0], ["2024-02-10", 0], ["2024-02-11", 0], ["2024-02-12", 0], ["2024-02-13", 0], ["2024-02-14", 0], ["2024-02-15", 0], ["2024-02-16", 0], ["2024-02-17", 0], ["2024-02-18", 0], ["2024-02-19", 0], ["2024-02-20", 0], ["2024-02-21", 0], ["2024-02-22", 0], ["2024-02-23", 0], ["2024-02-24", 0], ["2024-02-25", 0], ["2024-02-26", 0], ["2024-02-27", 0], ["2024-02-28", 0], ["2024-02-29", 0], ["2024-03-01", 0], ["2024-03-02", 0], ["2024-03-03", 0], ["2024-03-04", 0], ["2024-03-05", 0], ["2024-03-06", 0], ["2024-03-07", 0], ["2024-03-08", 0], ["2024-03-09", 0], ["2024-03-10", 0], ["2024-03-11", 0], ["2024-03-12", 0], ["2024-03-13", 0], ["2024-03-14", 0], ["2024-03-15", 0], ["2024-03-16", 0], ["2024-03-17", 0], ["2024-03-18", 0], ["2024-03-19", 0], ["2024-03-20", 0], ["2024-03-21", 0], ["2024-03-22", 0], ["2024-03-23", 0], ["2024-03-24", 0], ["2024-03-25", 0], ["2024-03-26", 0], ["2024-03-27", 0], ["2024-03-28", 0], ["2024-03-29", 0], ["2024-03-30", 0], ["2024-03-31", 0], ["2024-04-01", 0], ["2024-04-02", 0], ["2024-04-03", 0], ["2024-04-04", 0], ["2024-04-05", 0], ["2024-04-06", 0], ["2024-04-07", 0], ["2024-04-08", 0], ["2024-04-09", 0], ["2024-04-10", 0], ["2024-04-11", 0], ["2024-04-12", 0], ["2024-04-13", 0], ["2024-04-14", 0], ["2024-04-15", 0], ["2024-04-16", 0], ["2024-04-17", 0], ["2024-04-18", 0], ["2024-04-19", 0], ["2024-04-20", 0], ["2024-04-21", 0], ["2024-04-22", 0], ["2024-04-23", 0], ["2024-04-24", 0], ["2024-04-25", 0], ["2024-04-26", 0], ["2024-04-27", 0], ["2024-04-28", 0], ["2024-04-29", 0], ["2024-04-30", 0], ["2024-05-01", 0], ["2024-05-02", 0], ["2024-05-03", 0], ["2024-05-04", 0], ["2024-05-05", 0], ["2024-05-06", 0], ["2024-05-07", 0], ["2024-05-08", 0], ["2024-05-09", 0], ["2024-05-10", 0], ["2024-05-11", 0], ["2024-05-12", 0], ["2024-05-13", 0], ["2024-05-14", 0], ["2024-05-15", 0], ["2024-05-16", 0], ["2024-05-17", 0], ["2024-05-18", 0], ["2024-05-19", 0], ["2024-05-20", 0], ["2024-05-21", 0], ["2024-05-22", 0], ["2024-05-23", 0], ["2024-05-24", 0], ["2024-05-25", 0], ["2024-05-26", 0], ["2024-05-27", 0], ["2024-05-28", 0], ["2024-05-29", 0], ["2024-05-30", 0], ["2024-05-31", 0], ["2024-06-01", 0], ["2024-06-02", 0], ["2024-06-03", 0], ["2024-06-04", 0], ["2024-06-05", 0], ["2024-06-06", 0], ["2024-06-07", 0], ["2024-06-08", 0], ["2024-06-09", 0], ["2024-06-10", 0], ["2024-06-11", 0], ["2024-06-12", 0], ["2024-06-13", 0], ["2024-06-14", 0], ["2024-06-15", 0], ["2024-06-16", 0], ["2024-06-17", 0], ["2024-06-18", 0], ["2024-06-19", 0], ["2024-06-20", 0], ["2024-06-21", 0], ["2024-06-22", 0], ["2024-06-23", 0], ["2024-06-24", 0], ["2024-06-25", 0], ["2024-06-26", 0], ["2024-06-27", 0], ["2024-06-28", 0], ["2024-06-29", 0], ["2024-06-30", 0], ["2024-07-01", 0], ["2024-07-02", 0], ["2024-07-03", 0], ["2024-07-04", 0], ["2024-07-05", 0], ["2024-07-06", 0], ["2024-07-07", 0], ["2024-07-08", 0], ["2024-07-09", 0], ["2024-07-10", 0], ["2024-07-11", 0], ["2024-07-12", 0], ["2024-07-13", 0], ["2024-07-14", 0], ["2024-07-15", 0], ["2024-07-16", 0], ["2024-07-17", 0], ["2024-07-18", 0], ["2024-07-19", 0], ["2024-07-20", 0], ["2024-07-21", 0], ["2024-07-22", 0], ["2024-07-23", 0], ["2024-07-24", 0], ["2024-07-25", 0], ["2024-07-26", 0], ["2024-07-27", 0], ["2024-07-28", 0], ["2024-07-29", 0], ["2024-07-30", 0], ["2024-07-31", 0], ["2024-08-01", 0], ["2024-08-02", 0], ["2024-08-03", 0], ["2024-08-04", 0], ["2024-08-05", 0], ["2024-08-06", 0], ["2024-08-07", 0], ["2024-08-08", 0], ["2024-08-09", 0], ["2024-08-10", 0], ["2024-08-11", 0], ["2024-08-12", 0], ["2024-08-13", 0], ["2024-08-14", 0], ["2024-08-15", 0], ["2024-08-16", 0], ["2024-08-17", 0], ["2024-08-18", 0], ["2024-08-19", 0], ["2024-08-20", 0], ["2024-08-21", 0], ["2024-08-22", 0], ["2024-08-23", 0], ["2024-08-24", 0], ["2024-08-25", 0], ["2024-08-26", 0], ["2024-08-27", 0], ["2024-08-28", 0], ["2024-08-29", 0], ["2024-08-30", 0], ["2024-08-31", 0], ["2024-09-01", 0], ["2024-09-02", 0], ["2024-09-03", 0], ["2024-09-04", 0], ["2024-09-05", 0], ["2024-09-06", 0], ["2024-09-07", 0], ["2024-09-08", 0], ["2024-09-09", 0], ["2024-09-10", 0], ["2024-09-11", 0], ["2024-09-12", 0], ["2024-09-13", 0], ["2024-09-14", 0], ["2024-09-15", 0], ["2024-09-16", 0], ["2024-09-17", 0], ["2024-09-18", 0], ["2024-09-19", 0], ["2024-09-20", 0], ["2024-09-21", 0], ["2024-09-22", 0], ["2024-09-23", 0], ["2024-09-24", 0], ["2024-09-25", 0], ["2024-09-26", 0], ["2024-09-27", 0], ["2024-09-28", 0], ["2024-09-29", 0], ["2024-09-30", 0], ["2024-10-01", 0], ["2024-10-02", 0], ["2024-10-03", 0], ["2024-10-04", 0], ["2024-10-05", 0], ["2024-10-06", 0], ["2024-10-07", 0], ["2024-10-08", 0], ["2024-10-09", 0], ["2024-10-10", 0], ["2024-10-11", 0], ["2024-10-12", 0], ["2024-10-13", 0], ["2024-10-14", 0], ["2024-10-15", 0], ["2024-10-16", 0], ["2024-10-17", 0], ["2024-10-18", 0], ["2024-10-19", 0], ["2024-10-20", 0], ["2024-10-21", 0], ["2024-10-22", 0], ["2024-10-23", 0], ["2024-10-24", 0], ["2024-10-25", 0], ["2024-10-26", 0], ["2024-10-27", 0], ["2024-10-28", 0], ["2024-10-29", 0], ["2024-10-30", 0], ["2024-10-31", 0], ["2024-11-01", 0], ["2024-11-02", 0], ["2024-11-03", 0], ["2024-11-04", 0], ["2024-11-05", 0], ["2024-11-06", 0], ["2024-11-07", 0], ["2024-11-08", 0], ["2024-11-09", 0], ["2024-11-10", 0], ["2024-11-11", 0], ["2024-11-12", 0], ["2024-11-13", 0], ["2024-11-14", 0], ["2024-11-15", 0], ["2024-11-16", 0], ["2024-11-17", 0], ["2024-11-18", 0], ["2024-11-19", 0], ["2024-11-20", 0], ["2024-11-21", 1], ["2024-11-22", 0], ["2024-11-23", 0], ["2024-11-24", 0], ["2024-11-25", 0], ["2024-11-26", 0], ["2024-11-27", 2], ["2024-11-28", 0], ["2024-11-29", 0], ["2024-11-30", 0], ["2024-12-01", 0], ["2024-12-02", 1], ["2024-12-03", 1]]
-        }]
-
-    };
-
-    myChart.setOption(option);
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
+            
+        </div>
+    </div>
+
+    
+
     
 
     
 
-    <div id="cd-timeline" class="container">
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC82MDI1MS8zNjcxOQ==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
         
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2024">2024</a>
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2024/12">12</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>03</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/2024/12/03/study-web3-01/">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="学习web3-01">
-                                
-                                <span class="card-title">学习web3-01</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    整理收集一些web3的学习资料。
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2024-12-03
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Web3-0/" class="post-category">
+            <div class="card">
+                <a href="/2024/12/03/study-web3-01/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="学习web3-01">
+                        
+                        <span class="card-title">学习web3-01</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            整理收集一些web3的学习资料。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Web3-0/" class="post-category">
                                     Web3.0
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
+                                </a>
                             
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2/"><span class="chip bg-color">博客</span></a>
                             
-                            <a href="/tags/%E6%8A%80%E6%9C%AF/"><span class="chip bg-color">技术</span></a>
-                            
-                            <a href="/tags/Web3-0/"><span class="chip bg-color">Web3.0</span></a>
-                            
-                            <a href="/tags/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C/"><span class="chip bg-color">远程工作</span></a>
-                            
-                        </div>
-                        
+                        </span>
                     </div>
                 </div>
-            </article>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">博客</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                    <a href="/tags/Web3-0/">
+                        <span class="chip bg-color">Web3.0</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C/">
+                        <span class="chip bg-color">远程工作</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
         </div>
         
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>02</span>
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/2024/12/02/alist-typora-picgo/">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="基于alist图床写博客">
-                                
-                                <span class="card-title">基于alist图床写博客</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    用阿里云盘当图床，写一篇markdown格式博客。
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2024-12-02
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Blog/" class="post-category">
+            <div class="card">
+                <a href="/2024/12/02/alist-typora-picgo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="基于alist图床写博客">
+                        
+                        <span class="card-title">基于alist图床写博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            用阿里云盘当图床，写一篇markdown格式博客。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Blog/" class="post-category">
                                     Blog
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
+                                </a>
                             
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2/"><span class="chip bg-color">博客</span></a>
                             
-                            <a href="/tags/%E6%8A%80%E6%9C%AF/"><span class="chip bg-color">技术</span></a>
-                            
-                            <a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a>
-                            
-                            <a href="/tags/picgo/"><span class="chip bg-color">picgo</span></a>
-                            
-                            <a href="/tags/typora/"><span class="chip bg-color">typora</span></a>
-                            
-                            <a href="/tags/alist/"><span class="chip bg-color">alist</span></a>
-                            
-                        </div>
-                        
+                        </span>
                     </div>
                 </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2024/11">11</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>27</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/2024/11/27/hai-nuan-nuan/">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="嗨，暖暖">
-                                
-                                <span class="card-title">嗨，暖暖</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    暖暖的石头，开始记录我们的故事。
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2024-11-27
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E5%BF%83%E8%AF%AD/"><span class="chip bg-color">心语</span></a>
-                            
-                            <a href="/tags/%E7%88%B1%E6%83%85/"><span class="chip bg-color">爱情</span></a>
-                            
-                        </div>
-                        
-                    </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">博客</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/picgo/">
+                        <span class="chip bg-color">picgo</span>
+                    </a>
+                    
+                    <a href="/tags/typora/">
+                        <span class="chip bg-color">typora</span>
+                    </a>
+                    
+                    <a href="/tags/alist/">
+                        <span class="chip bg-color">alist</span>
+                    </a>
+                    
                 </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>27</span>
+                
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/2024/11/27/first-post/">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="搭建日记">
-                                
-                                <span class="card-title">搭建日记</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    终于在2024年11月27日19:02:00，基于github静态页面我搭建了自己的个人博客。
-主要介绍虽然这个博客很简单，但是它是我自己的，我可以用它来记录我和暖暖的生活，记录我们的学习，记录我们的思考。
-主要技术
-博客框架：Hexo
-博
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2024-11-27
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-user fa-fw"></i>
-                                    石头
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/"><span class="chip bg-color">随笔</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>21</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/2024/11/21/hello-world/">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                                
-                                <span class="card-title">Hello World</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2024-11-21
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-user fa-fw"></i>
-                                    石头
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                </div>
-            </article>
         </div>
         
     </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    
 
 </main>
 
