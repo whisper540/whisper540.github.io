@@ -6,7 +6,7 @@
   <link href="https://blog.anliu.site/atom.xml" rel="self"/>
   
   <link href="https://blog.anliu.site/"/>
-  <updated>2024-12-03T07:59:05.843Z</updated>
+  <updated>2024-12-04T11:51:26.781Z</updated>
   <id>https://blog.anliu.site/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vpn-wireguard-01</title>
+    <link href="https://blog.anliu.site/2024/12/04/vpn-wireguard-01/"/>
+    <id>https://blog.anliu.site/2024/12/04/vpn-wireguard-01/</id>
+    <published>2024-12-04T06:19:48.000Z</published>
+    <updated>2024-12-04T11:51:26.781Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本篇文章根据一个具体的案例，介绍如何从0开始搭建一个wireguard服务端环境（例如：SERVER01），并配置两台客户端(PCA、PCB)异地互联（在整个互联网内实现一个大局域网）：&lt;/p&gt;
+&lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>designable源码学习</title>
+    <link href="https://blog.anliu.site/2024/12/04/designable-yuan-ma-xue-xi/"/>
+    <id>https://blog.anliu.site/2024/12/04/designable-yuan-ma-xue-xi/</id>
+    <published>2024-12-04T03:08:31.000Z</published>
+    <updated>2024-12-04T03:34:23.439Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;designable+formily是一个低代码平台的解决方案，代码比较优秀，值得深入学习。&lt;/p&gt;
+&lt;h2 id=&quot;项目源码阅读顺序&quot;&gt;&lt;a href=&quot;#项目源码阅读顺序&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://blog.anliu.site/categories/Frontend/"/>
+    
+    
+    <category term="技术" scheme="https://blog.anliu.site/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="frontend" scheme="https://blog.anliu.site/tags/frontend/"/>
+    
+    <category term="designable" scheme="https://blog.anliu.site/tags/designable/"/>
+    
+    <category term="formily" scheme="https://blog.anliu.site/tags/formily/"/>
+    
+  </entry>
+  
+  <entry>
     <title>NginxProxyManager泛域名SSL证书</title>
     <link href="https://blog.anliu.site/2024/12/03/nginxproxymanager-fan-yu-ming/"/>
     <id>https://blog.anliu.site/2024/12/03/nginxproxymanager-fan-yu-ming/</id>
     <published>2024-12-03T07:07:59.000Z</published>
-    <updated>2024-12-03T07:59:05.843Z</updated>
+    <updated>2024-12-04T06:20:50.250Z</updated>
     
     
       
@@ -35,12 +91,8 @@
     
     
     
-    <category term="nginx" scheme="https://blog.anliu.site/categories/nginx/"/>
+    <category term="Nginx" scheme="https://blog.anliu.site/categories/Nginx/"/>
     
-    
-    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="技术" scheme="https://blog.anliu.site/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="nginx" scheme="https://blog.anliu.site/tags/nginx/"/>
     
@@ -57,7 +109,7 @@
     <link href="https://blog.anliu.site/2024/12/03/study-web3-01/"/>
     <id>https://blog.anliu.site/2024/12/03/study-web3-01/</id>
     <published>2024-12-03T02:04:17.000Z</published>
-    <updated>2024-12-03T02:55:33.124Z</updated>
+    <updated>2024-12-04T03:09:12.285Z</updated>
     
     
       
@@ -74,9 +126,9 @@
     <category term="Web3.0" scheme="https://blog.anliu.site/categories/Web3-0/"/>
     
     
-    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="技术" scheme="https://blog.anliu.site/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
     
     <category term="Web3.0" scheme="https://blog.anliu.site/tags/Web3-0/"/>
     
@@ -89,7 +141,7 @@
     <link href="https://blog.anliu.site/2024/12/02/alist-typora-picgo/"/>
     <id>https://blog.anliu.site/2024/12/02/alist-typora-picgo/</id>
     <published>2024-12-02T08:46:11.000Z</published>
-    <updated>2024-12-03T01:38:16.791Z</updated>
+    <updated>2024-12-04T03:10:20.494Z</updated>
     
     
       
@@ -106,8 +158,6 @@
     <category term="Blog" scheme="https://blog.anliu.site/categories/Blog/"/>
     
     
-    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="技术" scheme="https://blog.anliu.site/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="hexo" scheme="https://blog.anliu.site/tags/hexo/"/>
@@ -118,6 +168,8 @@
     
     <category term="alist" scheme="https://blog.anliu.site/tags/alist/"/>
     
+    <category term="博客" scheme="https://blog.anliu.site/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
   </entry>
   
   <entry>
@@ -125,26 +177,24 @@
     <link href="https://blog.anliu.site/2024/11/27/hai-nuan-nuan/"/>
     <id>https://blog.anliu.site/2024/11/27/hai-nuan-nuan/</id>
     <published>2024-11-27T10:57:09.000Z</published>
-    <updated>2024-12-02T08:29:18.253Z</updated>
+    <updated>2024-12-04T06:12:06.871Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;暖暖的石头，开始记录我们的故事。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;暖暖呀，常常一句话我说了开头你就说了另一半，我们相拥而笑。如果存在是为了遇见你，那么我来了。&lt;/p&gt;
 &lt;h2 id=&quot;絮絮叨叨&quot;&gt;&lt;a href=&quot;#絮絮叨叨&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="Markdown" scheme="https://blog.anliu.site/categories/Markdown/"/>
+    <category term="Feeling" scheme="https://blog.anliu.site/categories/Feeling/"/>
     
     
-    <category term="心语" scheme="https://blog.anliu.site/tags/%E5%BF%83%E8%AF%AD/"/>
-    
-    <category term="爱情" scheme="https://blog.anliu.site/tags/%E7%88%B1%E6%83%85/"/>
+    <category term="两个人" scheme="https://blog.anliu.site/tags/%E4%B8%A4%E4%B8%AA%E4%BA%BA/"/>
     
   </entry>
   

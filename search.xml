@@ -4,6 +4,52 @@
   
     
     <entry>
+      <title>vpn-wireguard-01</title>
+      <link href="/2024/12/04/vpn-wireguard-01/"/>
+      <url>/2024/12/04/vpn-wireguard-01/</url>
+      
+        <content type="html"><![CDATA[<p>本篇文章根据一个具体的案例，介绍如何从0开始搭建一个wireguard服务端环境（例如：SERVER01），并配置两台客户端(PCA、PCB)异地互联（在整个互联网内实现一个大局域网）：</p><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>vpn</strong>：虚拟专用通道；</p><p><strong>wireguard</strong>：linux内置的一个vpn工具；</p><p><strong>网卡</strong>(有线/无线)：客户端/服务器用来连接网络的硬件设备；</p><p><strong>虚拟网卡</strong>：由软件模拟出来的网卡，功能和网卡类似（也能实现上网功能），一台电脑可以虚拟出来多张虚拟网卡；</p><p><strong>ip地址</strong>：</p><ul><li>私有ipv4地址：<ul><li>A类地址: 10.0.0.0 - 10.255.255.255，子网掩码:10.0.0.0/8，数量:1677 万个</li><li>B类地址: 172.16.0.0 - 172.31.255.255，子网掩码:255.240.0.0/12，数量:104 万个</li><li>C类地址: 192.168.0.0 - 192.168.255.255，子网掩码:255.255.0.0/16，数量:65536个</li></ul></li><li>私有ipv6地址：<ul><li>fc00::/7类: fc00:: 到 fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</li><li>fe80::/64类:这是链路本地地址范围，仅用于同一链路上的设备之间的通信。</li></ul></li><li>公网ip地址：一台可以访问互联网的设备，并且具有非私有网段的ip地址</li></ul><h3 id="达成目标"><a href="#达成目标" class="headerlink" title="达成目标"></a>达成目标</h3><ol><li>PCA和PCB可以通讯，并且可以访问互联网</li><li>PCA依然可以访问局域网内设备(例如：PC01、phone01等)</li></ol><h3 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h3><p>真实网络拓扑图：<br><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-01.png"></p><p>wireguard环境拓扑图(大局域网)：<br><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-02.png"></p><p>SERVER01：</p><ul><li>可访问互联网，并有公网ip</li><li>安装了wireguard服务端环境，并配置了大局域网的网段为：10.0.10.x/32</li><li>分配给PCA的虚拟网卡的地址（二维码/配置文件）为：10.0.10.2</li><li>分配给PCA的虚拟网卡的地址（二维码/配置文件）为：10.0.10.3</li></ul><p>PCA（Mac系统）：</p><ul><li>可以访问互联网即可(无需公网ip)</li><li>路由器分配了局域网ip地址(例如：192.168.0.22)</li><li>安装wireguard客户端</li></ul><p>PCB（Win系统）：</p><ul><li>可以访问互联网即可(无需公网ip)</li><li>路由器分配了局域网ip地址(例如：192.168.0.22)</li><li>安装wireguard客户端</li></ul><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>wireguard-docker-compose.yml</p><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>designable源码学习</title>
+      <link href="/2024/12/04/designable-yuan-ma-xue-xi/"/>
+      <url>/2024/12/04/designable-yuan-ma-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<p>designable+formily是一个低代码平台的解决方案，代码比较优秀，值得深入学习。</p><h2 id="项目源码阅读顺序"><a href="#项目源码阅读顺序" class="headerlink" title="项目源码阅读顺序"></a>项目源码阅读顺序</h2><ol><li>先看项目结构</li><li>先看工具函数(shared)</li><li>再看核心代码(core)</li><li>最后看示例项目(examples)</li></ol><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><h2 id="项目源码阅读"><a href="#项目源码阅读" class="headerlink" title="项目源码阅读"></a>项目源码阅读</h2><h3 id="工具函数-shared"><a href="#工具函数-shared" class="headerlink" title="工具函数(shared)"></a>工具函数(shared)</h3><h3 id="核心代码-core"><a href="#核心代码-core" class="headerlink" title="核心代码(core)"></a>核心代码(core)</h3><h4 id="1-drivers"><a href="#1-drivers" class="headerlink" title="1. drivers"></a>1. drivers</h4><p>描述：包含了所有的DOM事件进行交互的事件驱动。注册事件、移除事件、发数据。</p><h4 id="2-effects"><a href="#2-effects" class="headerlink" title="2. effects"></a>2. effects</h4><p>描述：核心逻辑，注重业务逻辑，完全不需要关系DOM级别，<br>data-content-editable=”x-component-props.title”表示组件的title属性可以编辑。</p><h4 id="3-events"><a href="#3-events" class="headerlink" title="3. events"></a>3. events</h4><p>描述：</p><h4 id="4-models"><a href="#4-models" class="headerlink" title="4. models"></a>4. models</h4><p>描述：</p><h4 id="5-shortcuts"><a href="#5-shortcuts" class="headerlink" title="5. shortcuts"></a>5. shortcuts</h4><p>描述：</p><h4 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h4><p>描述：</p><h3 id="示例项目-examples"><a href="#示例项目-examples" class="headerlink" title="示例项目(examples)"></a>示例项目(examples)</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> frontend </tag>
+            
+            <tag> designable </tag>
+            
+            <tag> formily </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NginxProxyManager泛域名SSL证书</title>
       <link href="/2024/12/03/nginxproxymanager-fan-yu-ming/"/>
       <url>/2024/12/03/nginxproxymanager-fan-yu-ming/</url>
@@ -13,16 +59,12 @@
       
       <categories>
           
-          <category> nginx </category>
+          <category> Nginx </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> 博客 </tag>
-            
-            <tag> 技术 </tag>
             
             <tag> nginx </tag>
             
@@ -55,9 +97,9 @@
       
         <tags>
             
-            <tag> 博客 </tag>
-            
             <tag> 技术 </tag>
+            
+            <tag> 博客 </tag>
             
             <tag> Web3.0 </tag>
             
@@ -86,8 +128,6 @@
       
         <tags>
             
-            <tag> 博客 </tag>
-            
             <tag> 技术 </tag>
             
             <tag> hexo </tag>
@@ -97,6 +137,8 @@
             <tag> typora </tag>
             
             <tag> alist </tag>
+            
+            <tag> 博客 </tag>
             
         </tags>
       
@@ -109,21 +151,19 @@
       <link href="/2024/11/27/hai-nuan-nuan/"/>
       <url>/2024/11/27/hai-nuan-nuan/</url>
       
-        <content type="html"><![CDATA[<p>暖暖的石头，开始记录我们的故事。</p><h2 id="絮絮叨叨"><a href="#絮絮叨叨" class="headerlink" title="絮絮叨叨"></a>絮絮叨叨</h2>]]></content>
+        <content type="html"><![CDATA[<p>暖暖呀，常常一句话我说了开头你就说了另一半，我们相拥而笑。如果存在是为了遇见你，那么我来了。</p><h2 id="絮絮叨叨"><a href="#絮絮叨叨" class="headerlink" title="絮絮叨叨"></a>絮絮叨叨</h2>]]></content>
       
       
       <categories>
           
-          <category> Markdown </category>
+          <category> Feeling </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 心语 </tag>
-            
-            <tag> 爱情 </tag>
+            <tag> 两个人 </tag>
             
         </tags>
       
