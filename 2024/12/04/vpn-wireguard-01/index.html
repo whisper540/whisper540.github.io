@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vpn-wireguard-01, 石头,暖暖,日常,博客">
-    <meta name="description" content="本篇文章根据一个具体的案例，介绍如何从0开始搭建一个wireguard服务端环境（例如：SERVER01），并配置两台客户端(PCA、PCB)异地互联（在整个互联网内实现一个大局域网）：
-基本概念vpn：虚拟专用通道；
-wireguard：">
+    <meta name="keywords" content="从0开始搭建一个wireguard环境, 石头,暖暖,日常,博客">
+    <meta name="description" content="从0开始搭建一个wireguard环境">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@ wireguard：">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vpn-wireguard-01 | 暖暖的石头</title>
+    <title>从0开始搭建一个wireguard环境 | 暖暖的石头</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -40,9 +38,7 @@ wireguard：">
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
-
 
 
 
@@ -339,12 +335,12 @@ wireguard：">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vpn-wireguard-01</h1>
+                    <h1 class="description center-align post-title">从0开始搭建一个wireguard环境</h1>
                 </div>
             </div>
         </div>
@@ -354,24 +350,43 @@ wireguard：">
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/docker/">
+                                <span class="chip bg-color">docker</span>
+                            </a>
+                        
+                            <a href="/tags/wireguard/">
+                                <span class="chip bg-color">wireguard</span>
+                            </a>
+                        
+                            <a href="/tags/vpn/">
+                                <span class="chip bg-color">vpn</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Vpn/" class="post-category">
+                                Vpn
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -433,9 +448,9 @@ wireguard：">
 <p>SERVER01：</p>
 <ul>
 <li>可访问互联网，并有公网ip</li>
-<li>安装了wireguard服务端环境，并配置了大局域网的网段为：10.0.10.x/32</li>
-<li>分配给PCA的虚拟网卡的地址（二维码/配置文件）为：10.0.10.2</li>
-<li>分配给PCA的虚拟网卡的地址（二维码/配置文件）为：10.0.10.3</li>
+<li>安装了wireguard服务端环境，并配置了大局域网的网段为：172.16.0.x (相当于子网掩码/24)</li>
+<li>分配给PCA的虚拟网卡的地址（二维码/配置文件）为：172.16.0.2</li>
+<li>分配给PCA的虚拟网卡的地址（二维码/配置文件）为：172.16.0.3</li>
 </ul>
 <p>PCA（Mac系统）：</p>
 <ul>
@@ -449,8 +464,46 @@ wireguard：">
 <li>路由器分配了局域网ip地址(例如：192.168.0.22)</li>
 <li>安装wireguard客户端</li>
 </ul>
-<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>wireguard-docker-compose.yml</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><p>easy-wireguard-docker-compose.yml</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3.8"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">wg-easy-net:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">wg-easy:</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">LANG=chs</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WG_HOST=127.0.0.1</span></span><br><span class="line">      <span class="comment"># 下面密码是：foobar123</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PASSWORD_HASH=$$2y$$10$$hBCoykrB95WSzuV4fafBzOHWKu9sbyVa34GJr8VV5R/pIelfEMYyG</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PORT=51821</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WG_PORT=51820</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WG_DEFAULT_ADDRESS=172.16.0.x</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WG_DEFAULT_DNS=8.8.8.8,</span> <span class="number">8.8</span><span class="number">.4</span><span class="number">.4</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WG_ALLOWED_IPS=0.0.0.0/0,</span> <span class="string">::/0</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">WG_PERSISTENT_KEEPALIVE=30</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nas.anliu.space:10000/wg-easy/wg-easy:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">wg-easy</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/etc/wireguard</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"51820:51820/udp"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"51821:51821/tcp"</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">cap_add:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">NET_ADMIN</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">SYS_MODULE</span></span><br><span class="line">    <span class="attr">sysctls:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">net.ipv4.ip_forward=1</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">net.ipv4.conf.all.src_valid_mark=1</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">wg-easy-net</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>首先安装docker和docker-compose环境，然后执行命令：</p>
+<p><code>docker-compose -f easy-wireguard-docker-compose.yml up -d</code></p>
+<h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><h4 id="1-在浏览器打开ip-51821-例如：x-x-x-x-51821-地址，如下："><a href="#1-在浏览器打开ip-51821-例如：x-x-x-x-51821-地址，如下：" class="headerlink" title="1. 在浏览器打开ip:51821( 例如：x.x.x.x:51821 )地址，如下："></a>1. 在浏览器打开ip:51821( 例如：x.x.x.x:51821 )地址，如下：</h4><p><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-03.png"></p>
+<h4 id="2-新建并下载配置文件（PCA-conf、PCB-conf）"><a href="#2-新建并下载配置文件（PCA-conf、PCB-conf）" class="headerlink" title="2. 新建并下载配置文件（PCA.conf、PCB.conf）"></a>2. 新建并下载配置文件（PCA.conf、PCB.conf）</h4><p><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-04.png"></p>
+<p><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-05.png"></p>
+<p>配置信息一般如下(把ip替换成自己的服务器公网ip)：</p>
+<p><code>PCA.conf</code></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Interface]</span><br><span class="line">PrivateKey = SLRWKG1qHsu4WZURw3mNsa5D7Q40fsiaGpCwmBF5M38=</span><br><span class="line">Address = 172.16.0.2/24</span><br><span class="line">DNS = 8.8.8.8, 8.8.4.4</span><br><span class="line"></span><br><span class="line">[Peer]</span><br><span class="line">PublicKey = waOr+X1HT5LnLJd4wo1xEr2scN0oyhNNQWqGv2zO2TE=</span><br><span class="line">PresharedKey = 9P/aw4uBZysfAylToAd59QKm599ob5twZQOpjRCROQQ=</span><br><span class="line">AllowedIPs = 0.0.0.0/0, ::/0</span><br><span class="line">PersistentKeepalive = 30</span><br><span class="line">Endpoint = 100.12.2.1:51820</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>PCB.conf</code></p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Interface]</span><br><span class="line">PrivateKey = mOf7+7qHQZXt9AqhS8oykC81tgtGMTPhpN4HJ7MJaGU=</span><br><span class="line">Address = 172.16.0.3/24</span><br><span class="line">DNS = 8.8.8.8, 8.8.4.4</span><br><span class="line"></span><br><span class="line">[Peer]</span><br><span class="line">PublicKey = waOr+X1HT5LnLJd4wo1xEr2scN0oyhNNQWqGv2zO2TE=</span><br><span class="line">PresharedKey = MBgIcMJZ8WpeFvN3FR3t5VeqDQZdbNJZMIrHgja7zlY=</span><br><span class="line">AllowedIPs = 0.0.0.0/0, ::/0</span><br><span class="line">PersistentKeepalive = 30</span><br><span class="line">Endpoint = 100.12.2.1:51820</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h4 id="3-到wireguard官网下载并安装wireguard客户端"><a href="#3-到wireguard官网下载并安装wireguard客户端" class="headerlink" title="3. 到wireguard官网下载并安装wireguard客户端"></a>3. 到<a target="_blank" rel="noopener" href="https://www.wireguard.com/install/" title="wireguard官网">wireguard官网</a>下载并安装wireguard客户端</h4><p>打开界面如下</p>
+<p><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-06.png"></p>
+<p>在PCA客户端导入<code>PCA.conf</code>，点击连接，此时PCA电脑会由wireguard创建一个虚拟网卡，并且所有的网络访问请求都会走这张虚拟网卡。</p>
+<p><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-07.png"></p>
+<p>在PCB客户端导入<code>PCB.conf</code>，点击连接，此时PCB电脑会由wireguard创建一个虚拟网卡，并且所有的网络访问请求都会走这张虚拟网卡。</p>
+<p><img src="https://alist.anliu.site/d/alist-ali/wireguard-install-08.png"></p>
+<h4 id="4-额外配置"><a href="#4-额外配置" class="headerlink" title="4. 额外配置"></a>4. 额外配置</h4><p>   此时产生一个问题，访问的网络受SERVER01可访问的网络限制，SERVER01无法访问的，PCA和PCB也无法访问。<br>   解释下：PCA的所有网络请求都会走wireguard的虚拟网卡，即所有的请求都会经过<code>SERVER01</code>绕一次，由于<code>SERVER01</code>存在于公网上，那么PCA就会无法访问本地局域网的ip地址，例如PCA无法访问本地的192.0.0.x系列的设备，怎么解决这个问题呢？</p>
+<p>   解决办法：</p>
+<p>   手动配置本地网络访问规则，让所有192.168.0.x的网站都走本地网卡，其他的地址则走wireguard的虚拟网卡。</p>
+<p>   这里举例，例如PCA为MAC苹果电脑，执行以下脚本命令行：</p>
+<p>   <code>addLocalRouter.sh</code>（可以直接写入一个脚本文件中）</p>
+   <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">route add -net 192.0.0.0 -netmask 255.0.0.0 192.168.0.1</span><br></pre></td></tr></tbody></table></figure>
+
+<p>   删除脚本如下：</p>
+<p>   <code>deleteLocalRouter.sh</code>（可以直接写入一个脚本文件中）</p>
+   <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">route delete -net 192.0.0.0 -netmask 255.0.0.0 192.168.0.1</span><br></pre></td></tr></tbody></table></figure>
+<p>至此，你已经成功构建了一个公网范围内的“大局域网”，可以测试下：</p>
+<ul>
+<li>PCA客户端去ping PCB客户端</li>
+<li>PCB客户端去ping PCA客户端</li>
+<li>PCA和PCB去ping SERVER01</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -513,7 +566,19 @@ wireguard：">
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
+                                </a>
+                            
+                                <a href="/tags/wireguard/">
+                                    <span class="chip bg-color">wireguard</span>
+                                </a>
+                            
+                                <a href="/tags/vpn/">
+                                    <span class="chip bg-color">vpn</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -866,15 +931,15 @@ wireguard：">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="vpn-wireguard-01">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="从0开始搭建一个wireguard环境">
                         
-                        <span class="card-title">vpn-wireguard-01</span>
+                        <span class="card-title">从0开始搭建一个wireguard环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            从0开始搭建一个wireguard环境
                         
                     </div>
                     <div class="publish-info">
@@ -883,13 +948,33 @@ wireguard：">
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            石头
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Vpn/" class="post-category">
+                                    Vpn
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/wireguard/">
+                        <span class="chip bg-color">wireguard</span>
+                    </a>
+                    
+                    <a href="/tags/vpn/">
+                        <span class="chip bg-color">vpn</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -989,87 +1074,6 @@ wireguard：">
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
 
     
 

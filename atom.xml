@@ -6,7 +6,7 @@
   <link href="https://blog.anliu.site/atom.xml" rel="self"/>
   
   <link href="https://blog.anliu.site/"/>
-  <updated>2024-12-04T11:51:26.781Z</updated>
+  <updated>2024-12-05T06:21:12.959Z</updated>
   <id>https://blog.anliu.site/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vpn-wireguard-01</title>
+    <title>从0开始搭建一个wireguard环境</title>
     <link href="https://blog.anliu.site/2024/12/04/vpn-wireguard-01/"/>
     <id>https://blog.anliu.site/2024/12/04/vpn-wireguard-01/</id>
     <published>2024-12-04T06:19:48.000Z</published>
-    <updated>2024-12-04T11:51:26.781Z</updated>
+    <updated>2024-12-05T06:21:12.959Z</updated>
     
     
       
@@ -35,6 +35,14 @@
     
     
     
+    <category term="Vpn" scheme="https://blog.anliu.site/categories/Vpn/"/>
+    
+    
+    <category term="docker" scheme="https://blog.anliu.site/tags/docker/"/>
+    
+    <category term="wireguard" scheme="https://blog.anliu.site/tags/wireguard/"/>
+    
+    <category term="vpn" scheme="https://blog.anliu.site/tags/vpn/"/>
     
   </entry>
   
@@ -219,27 +227,6 @@
     
     
     <category term="随笔" scheme="https://blog.anliu.site/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://blog.anliu.site/2024/11/21/hello-world/"/>
-    <id>https://blog.anliu.site/2024/11/21/hello-world/</id>
-    <published>2024-11-21T13:42:33.343Z</published>
-    <updated>2024-11-21T13:42:33.344Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
