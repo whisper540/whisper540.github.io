@@ -2,7 +2,7 @@
 title: 基于alist图床写博客
 date: 2024-12-02 16:46:11
 author: 石头
-top: true
+top: false
 hide: false
 cover: true
 toc: false
@@ -16,7 +16,6 @@ tags:
   - picgo
   - typora
   - alist
-
 ---
 
 
