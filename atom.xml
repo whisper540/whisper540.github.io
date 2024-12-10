@@ -6,7 +6,7 @@
   <link href="https://blog.anliu.site/atom.xml" rel="self"/>
   
   <link href="https://blog.anliu.site/"/>
-  <updated>2024-12-05T06:41:41.606Z</updated>
+  <updated>2024-12-10T04:09:02.199Z</updated>
   <id>https://blog.anliu.site/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>运营学习资料</title>
+    <link href="https://blog.anliu.site/2024/12/10/yun-ying-xue-xi-zi-liao/"/>
+    <id>https://blog.anliu.site/2024/12/10/yun-ying-xue-xi-zi-liao/</id>
+    <published>2024-12-10T03:25:04.000Z</published>
+    <updated>2024-12-10T04:09:02.199Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本页面用来整理收集一些运营相关的学习资料。&lt;/p&gt;
+&lt;h2 id=&quot;哔哩哔哩&quot;&gt;&lt;a href=&quot;#哔哩哔哩&quot; class=&quot;headerlink&quot; title=&quot;哔哩哔哩&quot;&gt;&lt;/a&gt;哔哩哔哩&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Operation" scheme="https://blog.anliu.site/categories/Operation/"/>
+    
+    
+    <category term="operation" scheme="https://blog.anliu.site/tags/operation/"/>
+    
+    <category term="study" scheme="https://blog.anliu.site/tags/study/"/>
+    
+  </entry>
   
   <entry>
     <title>从0开始搭建一个wireguard环境</title>
