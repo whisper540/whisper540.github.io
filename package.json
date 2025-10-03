@@ -1,0 +1,35 @@
+{
+  "name": "stone-blog",
+  "version": "1.0.0",
+  "private": true,
+  "author": "石头",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@sugarat/theme": "0.5.7",
+    "element-plus": "^2.11.4",
+    "vue": "3.5.22"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "pagefind": "^1.4.0",
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3",
+    "vitepress": "^1.6.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  }
+}
