@@ -48,17 +48,34 @@ export default defineConfig({
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: '首页', link: '/' },
-      { text: '菜谱', link: '/menu' },
-      { text: '生活', link: '/blog' },
-      { text: '育娃', link: '/aby' },
-      { text: '技术', link: '/technique' },
-      // { text: '关于作者', link: 'https://sugarat.top/aboutme.html' }
+        { text: '首页', link: '/' },
+        { text: '生活',
+            items: [
+                { text: '日常',
+                    items: [
+                        { text: '配产假最后一天', link: '/life/daily/2025-10-30(配产假最后一天)' },
+                    ]
+                },
+            ]
+        },
+        { text: '育娃',
+            items: [
+                { text: '1岁',
+                    items: [
+                        { text: '育儿心经', link: '/year1/parenting-experience' },
+                    ]
+                },
+                { text: '...', link: '/year...' }
+            ]
+        },
+        // { text: '菜谱', link: '/menu' },
+        // { text: '技术', link: '/technique' },
+        { text: '关于作者', link: 'https://blog.anliu.online/about.html' }
     ],
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme'
+        link: 'https://github.com/whisper540'
       }
     ]
   }

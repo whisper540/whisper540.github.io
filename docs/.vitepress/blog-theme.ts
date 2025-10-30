@@ -2,23 +2,23 @@
 import { getThemeConfig } from '@sugarat/theme/node'
 
 // 开启RSS支持（RSS配置）
-// import type { Theme } from '@sugarat/theme'
+import type { Theme } from '@sugarat/theme'
 
-// const baseUrl = 'https://sugarat.top'
-// const RSS: Theme.RSSOptions = {
-//   title: '石头',
-//   baseUrl,
-//   copyright: 'Copyright (c) 2018-present, 石头',
-//   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
-//   language: 'zh-cn',
-//   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-//   favicon: 'https://sugarat.top/favicon.ico',
-// }
+const baseUrl = 'https://blog.anliu.online'
+const RSS: Theme.RSSOptions = {
+  title: '石头',
+  baseUrl,
+  copyright: 'Copyright (c) 2018-present, 石头',
+  description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
+  language: 'zh-cn',
+  image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
+  favicon: 'https://sugarat.top/favicon.ico',
+}
 
 // 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
   // 开启RSS支持
-  // RSS,
+  RSS,
 
   // 搜索
   // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
@@ -51,7 +51,7 @@ const blogTheme = getThemeConfig({
   // 友链
   friend: [
     {
-      nickname: '石头',
+      nickname: '粥里有勺糖',
       des: '你的指尖用于改变世界的力量',
       avatar:
         'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
@@ -73,7 +73,7 @@ const blogTheme = getThemeConfig({
       { type: 'text', content: '👇公众号👇---👇 微信 👇' },
       {
         type: 'image',
-        src: 'https://img.cdn.sugarat.top/mdImg/MTYxNTAxODc2NTIxMA==615018765210~fmt.webp'
+        src: 'https://bucket.anliu.online/picGo/1761790574606.jpg'
       },
       {
         type: 'text',
@@ -87,18 +87,18 @@ const blogTheme = getThemeConfig({
       {
         type: 'button',
         content: '作者博客',
-        link: 'https://sugarat.top'
+        link: 'https://blog.anliu.online'
       },
-      {
-        type: 'button',
-        content: '加群交流',
-        props: {
-          type: 'success'
-        },
-        link: 'https://theme.sugarat.top/group.html',
-      }
+      // {
+      //   type: 'button',
+      //   content: '加群交流',
+      //   props: {
+      //     type: 'success'
+      //   },
+      //   link: 'https://theme.sugarat.top/group.html',
+      // }
     ],
-    duration: 0
+    duration: 10000
   },
 })
 

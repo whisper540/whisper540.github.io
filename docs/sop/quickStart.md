@@ -1,4 +1,5 @@
 ---
+publish: false
 sticky: 999
 description: 1分钟内完成自己的博客创建
 descriptionHTML: '
@@ -10,8 +11,8 @@ descriptionHTML: '
     <span class="line"><span style="color:#B392F0;">bun create</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">@sugarat/theme</span><span style="color:#E1E4E8;"> </span></span>
 </code>
 </pre>'
-tag:
- - SOP
+#tag:
+# - SOP
 top: 1
 sidebar: false
 ---
