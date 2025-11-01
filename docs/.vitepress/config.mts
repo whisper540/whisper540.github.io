@@ -69,7 +69,15 @@ export default defineConfig({
             ]
         },
         // { text: '菜谱', link: '/menu' },
-        // { text: '技术', link: '/technique' },
+        { text: '技术',
+            items: [
+                { text: '商城系统',
+                    items: [
+                        { text: '开源商城', link: '/technique/shop/crmeb-shop-java-create' },
+                    ]
+                },
+            ]
+        },
         { text: '关于作者', link: 'https://blog.anliu.online/about.html' }
     ],
     socialLinks: [
