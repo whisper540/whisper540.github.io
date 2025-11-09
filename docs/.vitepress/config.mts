@@ -74,6 +74,7 @@ export default defineConfig({
                 { text: '商城系统',
                     items: [
                         { text: '开源商城', link: '/technique/shop/crmeb-shop-java-create' },
+                        { text: '上架商品', link: '/technique/shop/shop-admin' },
                     ]
                 },
             ]
